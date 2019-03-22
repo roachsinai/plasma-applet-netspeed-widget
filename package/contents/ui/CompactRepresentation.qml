@@ -144,6 +144,7 @@ Item {
         id: speedTextMetrics
         text: '1000.0'
         font.pixelSize: 64
+        font.family: "mononoki"
     }
 
     TextMetrics {
@@ -205,6 +206,7 @@ Item {
         anchors.leftMargin: font.pixelSize * marginFactor
         y: 0
         font.pixelSize: height * fontHeightRatio * fontSizeScale
+        font.family: "mononoki"
 
         text: speedText(showSeparately ? (swapDownUp ? upSpeed : downSpeed) : downSpeed + upSpeed)
         color: speedColor(showSeparately ? (swapDownUp ? upSpeed : downSpeed) : downSpeed + upSpeed)
@@ -221,6 +223,7 @@ Item {
         anchors.leftMargin: font.pixelSize * marginFactor
         y: 0
         font.pixelSize: height * fontHeightRatio * fontSizeScale
+        font.family: "mononoki"
 
         text: speedUnit(showSeparately ? (swapDownUp ? upSpeed : downSpeed) : downSpeed + upSpeed)
         color: theme.textColor
@@ -256,6 +259,7 @@ Item {
         anchors.leftMargin: font.pixelSize * marginFactor
         y: singleLine ? 0 : parent.height / 2
         font.pixelSize: height * fontHeightRatio * fontSizeScale
+        font.family: "mononoki"
 
         text: speedText(swapDownUp ? downSpeed : upSpeed)
         color: speedColor(swapDownUp ? downSpeed : upSpeed)
@@ -273,6 +277,7 @@ Item {
         anchors.leftMargin: font.pixelSize * marginFactor
         y: singleLine ? 0 : parent.height / 2
         font.pixelSize: height * fontHeightRatio * fontSizeScale
+        font.family: "mononoki"
 
         text: speedUnit(swapDownUp ? downSpeed : upSpeed)
         color: theme.textColor

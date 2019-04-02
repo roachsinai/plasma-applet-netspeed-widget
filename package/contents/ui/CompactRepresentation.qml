@@ -52,7 +52,7 @@ Item {
     property double iconWidth: showIcons ? iconTextMetrics.width + marginWidth : 0
     property double doubleIconWidth: showIcons ? (doubleIconTextMetrics.width + marginWidth) : 0
     property double speedWidth: speedTextMetrics.width + 2*marginWidth
-    property double unitWidth: showUnits ? unitTextMetrics.width + marginWidth : 0
+    property double unitWidth: showUnits ? unitTextMetrics.width : 0
 
     property double aspectRatio: {
         if (showSeparately) {
@@ -216,11 +216,11 @@ Item {
         id: topUnitText
 
         height: singleLine ? parent.height : parent.height / 2
-        width: unitTextMetrics.width / unitTextMetrics.height * height * fontSizeScale
+        width: unitTextMetrics.width / unitTextMetrics.height * height
 
         verticalAlignment: Text.AlignVCenter
         anchors.left: topText.right
-        anchors.leftMargin: font.pixelSize * marginFactor
+        anchors.leftMargin: font.pixelSize * marginFactor * 2
         y: 0
         font.pixelSize: height * fontHeightRatio * fontSizeScale
         font.family: "mononoki"
@@ -270,11 +270,11 @@ Item {
         id: bottomUnitText
 
         height: singleLine ? parent.height : parent.height / 2
-        width: unitTextMetrics.width / unitTextMetrics.height * height * fontSizeScale
+        width: unitTextMetrics.width / unitTextMetrics.height * height
 
         verticalAlignment: Text.AlignVCenter
         anchors.left: bottomText.right
-        anchors.leftMargin: font.pixelSize * marginFactor
+        anchors.leftMargin: font.pixelSize * marginFactor * 2
         y: singleLine ? 0 : parent.height / 2
         font.pixelSize: height * fontHeightRatio * fontSizeScale
         font.family: "mononoki"
